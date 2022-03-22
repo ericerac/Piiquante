@@ -1,4 +1,4 @@
-const http = require('http'); // import package http
+const http = require('http'); // import package http de node
 
 const app = require ('./app') // importe le fichier app.js
 
