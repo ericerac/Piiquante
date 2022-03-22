@@ -4,6 +4,7 @@
     "run-script-os": "^1.1.6"
   },
   "dependencies": {
+    "dotenv": "^16.0.0",
     "node": "^17.7.1"
   }
 }
