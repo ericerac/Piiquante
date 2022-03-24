@@ -1,10 +1,14 @@
 {
   "devDependencies": {
     "@angular/cli": "^13.3.0",
+    "dotenv": "^16.0.0",
     "run-script-os": "^1.1.6"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericerac/P6.git"
+  },
   "dependencies": {
-    "dotenv": "^16.0.0",
     "node": "^17.7.1"
   }
 }
