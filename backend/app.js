@@ -1,13 +1,15 @@
 const dotenv = require('dotenv');
-dotenv.config({path:'../../.env'});
+dotenv.config({path:'./.env'});
 
 const mongoose = require('mongoose');
 const mongoSanitize = require('express-mongo-sanitize');
-app.use(mongoSanitize());
+
 
 const express = require('express');
 const app = express();
 app.use(express.json());
+
+app.use(mongoSanitize());
 
 const sauceRoutes = require('./routes/sauces');
 const userRoutes = require('./routes/user');
@@ -21,8 +23,8 @@ var corsOptions = {
     optionsSuccessStatus: 200 
   }
 // connection to mongoDB
-//mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.quq8c.mongodb.net/hotTakes?retryWrites=true&w=majority`,
-mongoose.connect(`mongodb+srv://ericerac:mongoAgogo1@cluster0.quq8c.mongodb.net/${process.env.DB_NAME_TAB}?retryWrites=true&w=majority`,
+
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.quq8c.mongodb.net/${process.env.DB_NAME_TAB}?retryWrites=true&w=majority`,
     {   
     useNewUrlParser: true,
     useUnifiedTopology: true })
