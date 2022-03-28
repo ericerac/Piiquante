@@ -33,11 +33,11 @@ console.log(email);
   exports.login = (req, res, next) => {
 console.log(req.body.email);
     
-    User.findOne({ email: req.body.email}) // cherche l'utilisateur par son email dans la BDD
+    User.findOne({ email: req.body.email}) 
     
       .then(user => {
         if (!user) {     
-          console.log("email pas trouvé ");              // si il n'existe pas renvoi l'erreur 401
+          console.log("email pas trouvé ");            
           return res.status(401).json({ error: ' Compte utilisateur non trouvé !' });
         }
         // bcrypt compare les hash de la requête "1º argument" et de la BDD "2º argument"
