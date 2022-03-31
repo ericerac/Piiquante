@@ -39,8 +39,6 @@ app.use((req, res, next) => {
   next();
 });
 
-//app.use(cors(corsOptions));
-
 app.use("/images", express.static("images"));
 app.use(express.static("images"));
 
